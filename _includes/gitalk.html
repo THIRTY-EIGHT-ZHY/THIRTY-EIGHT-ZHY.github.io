@@ -5,11 +5,14 @@
 
 <script>
   const gitalk = new Gitalk({
-    clientID: 'a669aa04c262002c5535',
-    clientSecret: '3e5b1092b529ea90c7d6b81c4b73be6cc6216248',
-    repo: 'blog-comments',
-    owner: 'THIRTY-EIGHT-ZHY',
-    admin: ['THIRTY-EIGHT-ZHY'],
+      clientID: 'a669aa04c262002c5535',
+      clientSecret: '3e5b1092b529ea90c7d6b81c4b73be6cc6216248',
+      repo: 'blog-comments',
+      owner: 'THIRTY-EIGHT-ZHY',
+      admin: ['THIRTY-EIGHT-ZHY'],
+      id: location.pathname,
+      language: 'zh-CN',
+      distractionFreeMode: false
   })
   gitalk.render('gitalk-container')
 </script>
