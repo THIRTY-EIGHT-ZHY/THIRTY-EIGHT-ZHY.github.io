@@ -1,0 +1,16 @@
+# User config
+author: "hy-zhao22"
+tagline: "hy-zhao22 Certfied Jekyll Theme"
+description: "Intellectual Calculation Projects."
+keywords: "Deep-learning, Intelligent calculation"
+email: "hy-zhao22@mails.tsinghua.edu.cn"
+linkedin: "https://www.linkedin.com/"
+twitter: "https://twitter.com/"
+github: "https://github.com/"
+
+# Site config
+baseurl: ""
+highlighter: rouge
+sass:
+  sass_dir: assets/scss
+  style: compressed

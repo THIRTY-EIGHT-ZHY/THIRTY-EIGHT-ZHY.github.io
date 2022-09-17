@@ -1,0 +1,102 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ site.author }} / {{ site.tagline }}</title>
+    <meta name="author" content="{{ site.author }}">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="keywords" content="{{ site.keywords }}">
+    {% include head.html %}
+</head>
+<body>
+<main class="content">
+    <div class="flex-full-page">
+        <div class="navigator">
+            {% include navigator.html %}
+        </div>
+        <div class="main-body">
+            {% include header.html %}
+            <section class="intro">
+                <div class="container" id="div-colored">
+                    <h2>About me.</h2>
+                    <h1>{{ site.description }}</h1>
+                </div>
+                <div class="container" id="c-intro">
+                    <p id="p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eaque enim
+                        neque
+                        quo
+                        rem sit sunt! Accusamus at corporis cupiditate dolore doloremque dolores doloribus eveniet,
+                        natus
+                        nemo
+                        nulla odio quibusdam recusandae, reiciendis? Aspernatur consequuntur cum dicta eaque eum
+                        exercitationem
+                        illo in, natus nisi perferendis quisquam reprehenderit totam ut voluptates voluptatum?</p>
+                </div>
+            </section>
+
+            <section class="projects">
+                <div class="container">
+                    <ul class="projects-list">
+                        {% for item in site.categories.projects reversed %}
+                        <li>
+                            <div class="img-wrapper-title">
+                                <a class="ref" href="{{ item.url | prepend: site.baseurl }}">
+                                    <h1>{{ item.project.title }}</h1>
+                                </a>
+                                <span class="h2">Technologies:{{ item.project.tech }}</span>
+                            </div>
+                            <div class="flex-row">
+                                <div class="flex-dev">
+                                    <div class="img-container">
+                                        <img class="flex-img" src="{{ item.project.logo1 | prepend: site.baseurl }}"
+                                             alt="{{ item.project.title }}"/>
+                                    </div>
+                                    <h1 class="flex-h1">{{ item.project.title }}</h1>
+                                    <p class="flex-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore,
+                                        enim.</p>
+                                </div>
+                                <div class="flex-dev">
+                                    <div class="img-container">
+                                        <img class="flex-img" src="{{ item.project.logo2 | prepend: site.baseurl }}"
+                                             alt="{{ item.project.title }}"/>
+                                    </div>
+                                    <h1 class="flex-h1">{{ item.project.title }}</h1>
+                                    <p class="flex-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore,
+                                        enim.</p>
+                                </div>
+                                <div class="flex-dev">
+                                    <div class="img-container">
+                                        <img class="flex-img" src="{{ item.project.logo3 | prepend: site.baseurl }}"
+                                             alt="{{ item.project.title }}"/>
+                                    </div>
+                                    <h1 class="flex-h1">{{ item.project.title }}</h1>
+                                    <p class="flex-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore,
+                                        enim.</p>
+                                </div>
+                                <div class="flex-dev">
+                                    <div class="img-container">
+                                        <img class="flex-img" src="{{ item.project.logo4 | prepend: site.baseurl }}"
+                                             alt="{{ item.project.title }}"/>
+                                    </div>
+                                    <h1 class="flex-h1">{{ item.project.title }}</h1>
+                                    <p class="flex-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore,
+                                        enim.</p>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</main>
+{% include footer.html %}
+<script src="{{ "
+/assets/scripts/vendor/scrollreveal.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "
+/assets/scripts/home.js" | prepend: site.baseurl }}"></script>
+</body>
+</html>
